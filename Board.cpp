@@ -4,14 +4,25 @@
 
 using namespace std;
 
+
+
 class Board {
 	private:
 		static const int B_SIZE = 8;
 		char spaces[B_SIZE][B_SIZE];
 		bool occupied[B_SIZE][B_SIZE];
+		int cord[B_SIZE];
+		
 			
 	public:
 		
+		void choooseCord(int x){
+			cout << "Give me a x cord (1-8): " << endl;
+			cin >> cord[B_SIZE];
+			cout << "Give me a y cord (1-8): " << endl;
+			cin >> cord[B_SIZE];
+}
+
 		void setup(){
 			for(int i=0;i<B_SIZE;i++){
 				for(int j=0;j<B_SIZE;j++){
@@ -26,7 +37,7 @@ class Board {
 			int y = rand() % B_SIZE;
 			
 			occupied[x][y] = true;
-			
+
 		}
 		
 		void print(){
